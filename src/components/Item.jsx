@@ -54,7 +54,7 @@ class Item extends Component  {
                            
         //отправка
         this.rating.addEventListener('click', ()=>{
-                axios.post('http://localhost/www/testEpicenter/handler.php', {type : 'ratingVote', user_vote : user_votes, item_id : 1})
+                axios.post('http://suvorovs88.ho.ua/testEpicenter/handler.php', {type : 'ratingVote', user_vote : user_votes, item_id : 1})
                     .then((res)=>{console.log(res);})
                     .catch(err=>{console.log(err); })
         });
@@ -83,7 +83,7 @@ class Item extends Component  {
         }
     }
     addToCard(){
-        axios.post('http://localhost/www/testEpicenter/handler.php', {type : 'addToCard', order : {
+        axios.post('http://suvorovs88.ho.ua/testEpicenter/handler.php', {type : 'addToCard', order : {
             color : this.props.itemData.colorDescription[this.state.colorDescription],
             quantity : this.state.quantity,
         }})
