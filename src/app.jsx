@@ -10,7 +10,7 @@ class App extends Component {
     }
     componentWillMount(){
         let XHR = new XMLHttpRequest;
-        XHR.open('GET', '/handler.php?id=1', false);
+        XHR.open('GET', 'http://localhost/www/testEpicenter/handler.php?id=1', false);
         XHR.send();
         if (XHR.status != 200) {
             console.log( XHR.status + ': ' + XHR.statusText );
